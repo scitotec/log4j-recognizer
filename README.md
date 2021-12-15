@@ -44,7 +44,7 @@ tool.
         <dependency>
             <groupId>com.github.scitotec</groupId>
             <artifactId>log4j-recognizer</artifactId>
-            <version>1.0.1</version>
+            <version>1.0.2</version>
         </dependency>
     </dependencies>
 ```
@@ -56,6 +56,6 @@ repositories {
     maven { url 'https://jitpack.io' }
 }
 dependencies {
-    implementation 'com.github.scitotec:log4j-recognizer:1.0.1'
+    implementation 'com.github.scitotec:log4j-recognizer:1.0.2'
 }
 ```
