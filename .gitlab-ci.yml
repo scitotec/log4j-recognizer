@@ -1,0 +1,19 @@
+variables:
+  MVN_IMAGE: "3.8.4-openjdk-8"
+  MAVEN_CLI_OPTS: "--batch-mode --errors"
+  MAVEN_OPTS: "-Dmaven.repo.local=$CI_PROJECT_DIR/.cache/.m2/repository"
+
+stages:
+  - Test
+
+Unit Tests:
+  stage: Test
+  image: $MVN_IMAGE
+  script:
+    - mvn $MAVEN_CLI_OPTS test -P no-log4j
+    - mvn $MAVEN_CLI_OPTS test -P log4j-1.2
+    - mvn $MAVEN_CLI_OPTS test -P log4j-2.14
+    - mvn $MAVEN_CLI_OPTS test -P log4j-2.16
+  artifacts:
+    reports:
+      junit: target/surefire-reports/TEST-*.xml
