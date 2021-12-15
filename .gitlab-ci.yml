@@ -1,5 +1,5 @@
 variables:
-  MVN_IMAGE: "3.8.4-openjdk-8"
+  MVN_IMAGE: "maven:3.8.4-openjdk-8"
   MAVEN_CLI_OPTS: "--batch-mode --errors"
   MAVEN_OPTS: "-Dmaven.repo.local=$CI_PROJECT_DIR/.cache/.m2/repository"
 
