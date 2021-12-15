@@ -10,6 +10,16 @@ public class Log4jRecognizer {
         this.classLoader = classLoader;
     }
 
+    /**
+     * Tries to resolve the version of log4j if it exists. Not every log4j
+     * version has version information. Therefore, this information is not
+     * sufficient to tell if log4j is available or not.
+     *
+     * @return the version string of log4j or {@code null}
+     *
+     * @see #hasVersion1()
+     * @see #hasVersion2()
+     */
     public String version() {
         final Class<?> versionClass = getVersionClass();
         if (versionClass == null) return null;
@@ -28,10 +38,20 @@ public class Log4jRecognizer {
         }
     }
 
+    /**
+     * Determines if log4j 1.x is available.
+     *
+     * @return {@code true} if log4j 1.x classes are found
+     */
     public boolean hasVersion1() {
         return classExists("org.apache.log4j.Appender");
     }
 
+    /**
+     * Determines if log4j 2.x is available.
+     *
+     * @return {@code true} if log4j 2.x classes are found
+     */
     public boolean hasVersion2() {
         return getVersionClass() != null || classExists("org.apache.logging.log4j.core.Appender");
     }
