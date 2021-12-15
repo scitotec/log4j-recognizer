@@ -12,6 +12,7 @@ Unit Tests:
   script:
     - mvn $MAVEN_CLI_OPTS test -P no-log4j
     - mvn $MAVEN_CLI_OPTS test -P log4j-1.2
+    - mvn $MAVEN_CLI_OPTS test -P log4j-2.0
     - mvn $MAVEN_CLI_OPTS test -P log4j-2.14
     - mvn $MAVEN_CLI_OPTS test -P log4j-2.16
   artifacts:

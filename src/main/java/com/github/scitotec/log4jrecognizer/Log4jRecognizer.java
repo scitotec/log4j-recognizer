@@ -29,18 +29,21 @@ public class Log4jRecognizer {
     }
 
     public boolean hasVersion1() {
+        return classExists("org.apache.log4j.Appender");
+    }
+
+    public boolean hasVersion2() {
+        return getVersionClass() != null || classExists("org.apache.logging.log4j.core.Appender");
+    }
+
+    private boolean classExists(String classFqdn) {
         try {
-            Class.forName("org.apache.log4j.Appender", true, classLoader);
+            Class.forName(classFqdn, true, classLoader);
             return true;
         } catch (ClassNotFoundException e) {
             return false;
         }
     }
-
-    public boolean hasVersion2() {
-        return getVersionClass() != null;
-    }
-
 
     private Class<?> getVersionClass() {
         final Class<?> versionClass;
