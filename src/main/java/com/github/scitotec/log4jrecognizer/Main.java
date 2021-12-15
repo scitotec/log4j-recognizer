@@ -1,4 +1,4 @@
-package com.scitotec.log4shell;
+package com.github.scitotec.log4jrecognizer;
 
 public class Main {
 

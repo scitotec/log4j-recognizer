@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.scitotec.log4shell</groupId>
+    <groupId>com.github.scitotec</groupId>
     <artifactId>log4j-recognizer</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
@@ -32,6 +32,7 @@
                 <version>2.22.2</version>
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore>
+                    <groups>no-log4j</groups>
                 </configuration>
             </plugin>
             <plugin>

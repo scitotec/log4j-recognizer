@@ -1,4 +1,4 @@
-package com.scitotec.log4shell;
+package com.github.scitotec.log4jrecognizer;
 
 import org.junit.jupiter.api.BeforeEach;
 

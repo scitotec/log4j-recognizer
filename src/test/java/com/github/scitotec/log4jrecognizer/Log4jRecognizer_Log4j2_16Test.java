@@ -1,4 +1,4 @@
-package com.scitotec.log4shell;
+package com.github.scitotec.log4jrecognizer;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
@@ -9,9 +9,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @Nested
-@DisplayName("log4j 2.14.x")
-@Tag("log4j-2.14")
-class Log4jRecognizer_Log4j2_14Test extends AbstractLog4jRecognizerTest {
+@DisplayName("log4j 2.16.x")
+@Tag("log4j-2.16")
+class Log4jRecognizer_Log4j2_16Test extends AbstractLog4jRecognizerTest {
 
     @Test
     void hasVersion2() {
@@ -21,6 +21,6 @@ class Log4jRecognizer_Log4j2_14Test extends AbstractLog4jRecognizerTest {
     @Test
     void versionIsRecognized() {
         final String actual = recognizer.version();
-        assertEquals("Apache Log4j Core 2.14.1", actual);
+        assertEquals("Apache Log4j Core 2.16.0", actual);
     }
 }
