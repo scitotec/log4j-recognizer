@@ -3,7 +3,7 @@ package com.github.scitotec.log4jrecognizer;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-class Log4jRecognizer {
+public class Log4jRecognizer {
     private final ClassLoader classLoader;
 
     public Log4jRecognizer(ClassLoader classLoader) {
